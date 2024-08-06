@@ -12,13 +12,12 @@ function getComputerChoice (){
         return "paper";
 
     }
-    else{
-        console.log("Compter: scissors");
+    else if (computerValue >= 0.67 && computerValue <1){
+        console.log("Computer: scissors");
         return "scissors";
     }    
 }
 
-getComputerChoice()
 
 // step 3: logic for getting human choice 
 function getHumanChoice(){
@@ -80,6 +79,14 @@ function playRound(humanChoice, computerChoice){
     else if (computerChoice==="scissors" && humanChoice==="paper"){
         console.log("Terminator wins! Scissors beats paper");
         computerScore++;
-
     }
+    // for ties
+    else {
+        console.log("Tie! Try again");
+    }
+
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
