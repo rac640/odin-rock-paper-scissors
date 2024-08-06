@@ -1,3 +1,5 @@
+// Note: I re-did this project, since I messed up the git repository for the initial project. It was good practice though! 
+
 // step 2: Logic to get computer choice 
 
 function getComputerChoice (){
@@ -93,6 +95,29 @@ function playGame(){
 
     }
 }
+
+// round 1 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
+
+// round 2 
+const humanSelection2 = getHumanChoice();
+const computerSelection2 = getComputerChoice();
+playRound(humanSelection2,computerSelection2);
+
+// round 3
+const humanSelection3 = getHumanChoice();
+const computerSelection3 = getComputerChoice();
+playRound(humanSelection3, computerSelection3);
+
+// round 4
+const humanSelection4 = getHumanChoice();
+const computerSelection4 = getComputerChoice();
+playRound(humanSelection4, computerSelection4);
+
+// round 5
+
+const humanSelection5 = getHumanChoice();
+const computerSelection5 = getComputerChoice();
+playRound(humanSelection5, computerSelection5);
