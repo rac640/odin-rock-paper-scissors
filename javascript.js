@@ -46,5 +46,8 @@ function getHumanChoice(){
 
 }
 
+// step 4: declaring player score variables
+let humanScore = 0;
+let computerScore = 0;
 
-getHumanChoice()
+// step 5: Single round logic 
