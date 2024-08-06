@@ -5,16 +5,16 @@
 function getComputerChoice (){
 
     computerValue = Math.random();
-    if (computerValue >= 0 && computerValue <0.33){
+    if (computerValue >= 0 && computerValue <= 0.33){
         console.log("Computer: rock");
         return "rock";
     }
-    else if (computerValue >= 0.34 && computerValue <0.66){
+    else if (computerValue >= 0.34 && computerValue <= 0.66){
         console.log("Computer: paper");
         return "paper";
 
     }
-    else if (computerValue >= 0.67 && computerValue <1){
+    else {
         console.log("Computer: scissors");
         return "scissors";
     }    
@@ -62,41 +62,61 @@ function playGame(){
     function playRound(humanChoice, computerChoice){
         // For player to win
         if (humanChoice==="rock" && computerChoice==="scissors"){
-            console.log("You win! Rock beats scissors");
+            alert("You win! Rock beats scissors");
             humanScore++;
+            console.log("Your Score: " + humanScore);
+            console.log("Terminator's score: "+ computerScore);
+            
         }
         else if (humanChoice==="paper" && computerChoice==="rock"){
-            console.log("You win! Paper beats rock");
+            alert("You win! Paper beats rock");
             humanScore++;
+            console.log("Your Score: " + humanScore);
+            console.log("Terminator's score: "+ computerScore);
+            
             
         }
         else if (humanChoice ==="scissors" && computerChoice==="paper"){
-            console.log("You win! scissors beats paper");
+            alert("You win! scissors beats paper");
             humanScore++;
+            console.log("Your Score: " + humanScore);
+            console.log("Terminator's score: "+ computerScore);
+            
         }
         // for computer to win
         else if (computerChoice==="rock" && humanChoice==="scissors"){
-            console.log("Terminator wins! Rock beats scissors");
-            computerScore++;
+           alert("Terminator wins! Rock beats scissors");
+           computerScore++;
+            console.log("Your Score: " + humanScore);
+            console.log("Terminator's score: "+ computerScore);
+            
         }
         else if (computerChoice==="paper" && humanChoice==="rock"){
-            console.log("Terminator wins! Paper beats rock");
-            computerScore++;
+           alert("Terminator wins! Paper beats rock");
+           computerScore++;
+            console.log("Your Score: " + humanScore);
+            console.log("Terminator's score: "+ computerScore);
+            
 
         }
         else if (computerChoice==="scissors" && humanChoice==="paper"){
-            console.log("Terminator wins! Scissors beats paper");
+            alert("Terminator wins! Scissors beats paper");
             computerScore++;
+            console.log("Your Score: " + humanScore);
+            console.log("Terminator's score: "+ computerScore);
+            
         }
         // for ties
         else {
-            console.log("Tie! Try again");
+            alert("Tie! Try again");
+            console.log("Your Score: " + humanScore);
+            console.log("Terminator's score: "+ computerScore);
+            
         }
 
     }
-}
 
-// round 1 
+    // round 1 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
@@ -121,3 +141,18 @@ playRound(humanSelection4, computerSelection4);
 const humanSelection5 = getHumanChoice();
 const computerSelection5 = getComputerChoice();
 playRound(humanSelection5, computerSelection5);
+
+if (computerScore > humanScore){
+    console.log("Terminator Wins!");
+}
+else if (computerScore< humanScore){
+    console.log("You win!");
+}
+else{
+    console.log("Tie!");
+}
+
+}
+
+playGame();
+
