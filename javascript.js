@@ -51,3 +51,35 @@ let humanScore = 0;
 let computerScore = 0;
 
 // step 5: Single round logic 
+
+function playRound(humanChoice, computerChoice){
+    // For player to win
+    if (humanChoice==="rock" && computerChoice==="scissors"){
+        console.log("You win! Rock beats scissors");
+        humanScore++;
+    }
+    else if (humanChoice==="paper" && computerChoice==="rock"){
+        console.log("You win! Paper beats rock");
+        humanScore++;
+        
+    }
+    else if (humanChoice ==="scissors" && computerChoice==="paper"){
+        console.log("You win! scissors beats paper");
+        humanScore++;
+    }
+    // for computer to win
+    else if (computerChoice==="rock" && humanChoice==="scissors"){
+        console.log("Terminator wins! Rock beats scissors");
+        computerScore++;
+    }
+    else if (computerChoice==="paper" && humanChoice==="rock"){
+        console.log("Terminator wins! Paper beats rock");
+        computerScore++;
+
+    }
+    else if (computerChoice==="scissors" && humanChoice==="paper"){
+        console.log("Terminator wins! Scissors beats paper");
+        computerScore++;
+
+    }
+}
